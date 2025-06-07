@@ -1,10 +1,11 @@
-#include "MyUnique.hpp"
 #include "Firewall.hpp"
+#include "MyUnique.hpp"
 #include <iostream>
+#include <memory>
 
 int main() {
-	auto ptr1 = Make_MyUnique<Firewall>("Test", 4);
-	ptr1->print();
+    auto ptr1 = Make_MyUnique<Firewall>("Test", 4);
+    ptr1->print();
 
     MyUnique<int> ptr2(new int(100));
     std::cout << "Int value: " << *ptr2 << "\n";
